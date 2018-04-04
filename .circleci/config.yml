@@ -7,3 +7,12 @@ jobs:
        - checkout
        - run: env
        - run: echo "Hello, World!"
+
+workflows:
+  version: 2
+  tagged-build:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
