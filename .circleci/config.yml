@@ -11,10 +11,9 @@ jobs:
              - v1-source-cache
        - checkout
        - save_cache:
-           keys:
-             - v1-source-cache-{{ .Branch }}-{{ .Revision }}
-             - v1-source-cache-{{ .Branch }}-
-             - v1-source-cache
+           key: v1-source-cache-{{ .Branch }}-{{ .Revision }}
+           paths:
+             - .git
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
