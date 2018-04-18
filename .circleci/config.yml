@@ -8,3 +8,9 @@ jobs:
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
+       - run:
+          name: Install a port scanner
+          command: sudo apt-get install nmap
+       - run:
+          name: Scan ports on a mail server
+          command: nmap mail.entropyonwheels.com
