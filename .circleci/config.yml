@@ -9,6 +9,9 @@ jobs:
           name: Say hello to the world
           command: echo "Hello, World!"
        - run:
+          name: Update package list
+          command: sudo apt-get update
+       - run:
           name: Install a port scanner
           command: sudo apt-get install nmap
        - run:
