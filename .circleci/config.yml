@@ -9,3 +9,6 @@ jobs:
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
+       - run:
+          name: Try running the circleci tool
+          command: circleci
