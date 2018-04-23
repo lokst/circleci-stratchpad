@@ -3,3 +3,8 @@ jobs:
   build:
     macos:
       xcode: "9.0"
+    steps:
+       - checkout
+       - run:
+          name: Say hello to the world
+          command: echo "Hello, World!"
