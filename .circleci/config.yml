@@ -2,7 +2,7 @@ version: 2
 jobs:
    build:
      docker:
-      - image: drchrono/circleci:0.17
+      - image: circleci/python:2.7-jessie
       - image: circleci/mariadb:10.2-ram
      steps:
        - checkout
