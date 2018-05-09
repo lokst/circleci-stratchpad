@@ -9,8 +9,12 @@ jobs:
           name: Install missing utils
           command: sudo apt-get install dnsutils bind9-host
        - run:
+          name: natively resolve saucelabs
+          command: getent hosts ondemand.saucelabs.com
+       - run:
           name: Try to resolve saucelabs
           command: host ondemand.saucelabs.com
+          when: always
        - run:
           name: dig saucelabs
           command: dig ondemand.saucelabs.com
