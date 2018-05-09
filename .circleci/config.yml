@@ -6,8 +6,14 @@ jobs:
      steps:
        - checkout
        - run:
+          name: Install missing utils
+          command: sudo apt-get install dnsutils bind9-host
+       - run:
           name: Try to resolve saucelabs
           command: host ondemand.saucelabs.com
        - run:
-          name: Say hello to the world
-          command: echo "Hello, World!"
+          name: dig saucelabs
+          command: dig ondemand.saucelabs.com
+       - run:
+          name: resolve saucelabs again
+          command: host ondemand.saucelabs.com
