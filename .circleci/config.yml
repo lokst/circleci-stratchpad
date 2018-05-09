@@ -2,9 +2,12 @@ version: 2
 jobs:
    build:
      docker:
-       - image: circleci/python:2.7
+       - image: circleci/node:8.11.0-browsers
      steps:
        - checkout
+       - run:
+          name: Try to resolve saucelabs
+          command: host ondemand.saucelabs.com
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
