@@ -9,7 +9,7 @@ jobs:
           key: timestamp-test-v1
        - run:
           name: Generate a timestamp
-          command: [ -e timestamp ] || date >> timestamp
+          command: "[ -e timestamp ] || date >> timestamp"
        - run:
           name: Display timestamp
           command: cat timestamp
