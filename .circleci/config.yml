@@ -5,6 +5,18 @@ jobs:
        - image: circleci/python:2.7
      steps:
        - checkout
+       - restore_cache:
+          key: timestamp-test-v1
+       - run:
+          name: Generate a timestamp
+          command: [ -e timestamp ] || date >> timestamp
+       - run:
+          name: Display timestamp
+          command: cat timestamp
+       - save_cache:
+          key: timestamp-test-v1
+          paths:
+            - timestamp
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
