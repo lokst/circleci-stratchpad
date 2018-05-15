@@ -16,8 +16,9 @@ jobs:
           name: Show the current nfiles limit
           command: ulimit -n
        - run:
-          name: Increas the nfiles limit
+          name: Increase the nfiles limit
           command: ulimit -n 65535
+          shell: /bin/bash -eol pipefail
        - run:
           name: Show the current nfiles limit again
           command: ulimit -n
