@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo Script to display stuff
+echo
+echo Environment:
+env
+
+echo
+echo Limits:
+ulimit -a
+
+echo
+echo Username:
+whoami

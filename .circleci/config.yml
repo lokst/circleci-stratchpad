@@ -9,8 +9,10 @@ jobs:
           command: echo "Hello, World!"
        - run:
           name: Show the current nfiles limit after raising
-          command: ulimit -n
-          shell: "sudo bash -c 'ulimit -n 65535 sudo -u circleci /bin/bash -eol pipefail'"
+          shell: sudo /bin/bash -eol pipefail
+          command: |
+              ulimit -n 65535
+              sudo -u circleci ./runscript
        - run:
           name: Show the current nfiles limit again
           command: ulimit -n
