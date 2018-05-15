@@ -5,20 +5,12 @@ jobs:
      steps:
        - checkout
        - run:
-          name: Allow a higher nfiles
-          command: |
-              sudo sh -c 'echo session required pam_limits.so >> /etc/pam.d/common-session'
-              sudo sh -c 'echo *   hard    nfiles  65535 >> /etc/security/limits.conf'
-       - run:
           name: Say hello to the world
           command: echo "Hello, World!"
        - run:
-          name: Show the current nfiles limit
+          name: Show the current nfiles limit after raising
           command: ulimit -n
-       - run:
-          name: Increase the nfiles limit
-          command: ulimit -n 65535
-          shell: /bin/bash -eol pipefail
+          shell: sudo ulimit -n 65535 sudo -u circleci /bin/bash -eol pipefail
        - run:
           name: Show the current nfiles limit again
           command: ulimit -n
