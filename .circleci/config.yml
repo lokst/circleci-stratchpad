@@ -10,7 +10,7 @@ jobs:
        - run:
           name: Show the current nfiles limit after raising
           command: ulimit -n
-          shell: sudo bash -c 'ulimit -n 65535 sudo -u circleci /bin/bash -eol pipefail'
+          shell: "sudo bash -c 'ulimit -n 65535 sudo -u circleci /bin/bash -eol pipefail'"
        - run:
           name: Show the current nfiles limit again
           command: ulimit -n
