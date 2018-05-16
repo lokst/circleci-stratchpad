@@ -3,8 +3,32 @@ jobs:
    build:
      docker:
       - image: circleci/python:2.7
+          auth:
+            username: cherrypidocker  # can specify string literal values
+            password: $DOCKERHUB_PASSWORD  # or project environment variable reference
+
+     working_directory: ~/repo
+
      steps:
       - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
       - run:
-         name: Say hello to the world
-         command: echo "Hello, World!"
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            conda create --name ladder python=3.6.1
+            source activate ladder
+            pip install -r requirements.txt
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
