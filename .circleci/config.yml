@@ -2,7 +2,7 @@ version: 2
 jobs:
    build:
      docker:
-      - image: circleci/python:2.7
+      - image: nginx:1-perl
         auth:
           username: cherrypidocker  # can specify string literal values
           password: $DOCKERHUB_PASSWORD  # or project environment variable reference
