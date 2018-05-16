@@ -3,9 +3,6 @@ jobs:
    build:
      docker:
       - image: circleci/python:2.7
-          auth:
-            username: cherrypidocker  # can specify string literal values
-            password: $DOCKERHUB_PASSWORD  # or project environment variable reference
 
      working_directory: ~/repo
 
