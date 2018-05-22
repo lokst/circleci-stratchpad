@@ -8,9 +8,7 @@ jobs:
        - checkout
        - run:
           name: Run a subset of tests
-          command: |
-            shopt -s globstar
-            ls tests/**/*.testfile | xargs -n 50 | tail -n 2 | head -n 1 | circleci tests split
+          command: find tests -name '*.testfile' | head -n 50 | circleci tests split
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
