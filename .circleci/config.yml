@@ -8,7 +8,11 @@ jobs:
        - checkout
        - run:
           name: Run a subset of tests
-          command: find tests -name '*.testfile' | head -n 50 | circleci tests split
+          command: |
+            TESTS=$(find tests -name '*.testfile' | head -n 50 | circleci tests split)
+            for i in $TESTS; do
+                 echo $i
+            done
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
