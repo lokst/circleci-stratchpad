@@ -1,1 +1,7 @@
 export EXTRA_ENV=present
+
+pws() {
+	length=${1:-32}
+	cat /dev/urandom | tr -dc "A-Za-z0-9~@#$%^&*()[]{}_+=-" | head -c $length
+	echo
+}
