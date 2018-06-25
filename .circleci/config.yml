@@ -11,5 +11,8 @@ jobs:
        - run:
           name: Print the environment
           command: env
+       - run:
+          name: Print the environment
+          command: env
           environment:
             - BASH_ENV: "extraenv"
