@@ -9,7 +9,7 @@ jobs:
           name: Say hello to the world
           command: echo "Hello, World!"
        - run:
-          name: Print the environment
+          name: Print the environment without setting BASH_ENV
           command: env
        - run:
           name: Print the environment
