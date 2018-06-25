@@ -1,13 +1,12 @@
 version: 2
 jobs:
    build:
+     environment:
+       - BASH_ENV: "extraenv"
      machine:
        enabled: true
      steps:
        - checkout
-       - run:
-          name: Add to the env
-          command: echo "export EXTRA_ENV_FTW=allset" >> $BASH_ENV
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
