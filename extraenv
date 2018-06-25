@@ -1,1 +1,1 @@
-EXTRA_ENV=present
+export EXTRA_ENV=present
