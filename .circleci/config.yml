@@ -1,6 +1,8 @@
 version: 2
 jobs:
    build:
+     environment:
+       - BASH_ENV: "extraenv"
      docker:
        - image: circleci/python:2.7
      steps:
@@ -8,3 +10,6 @@ jobs:
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
+       - run:
+          name: Print the environment
+          command: env
