@@ -21,3 +21,4 @@ jobs:
           command: pws
           environment:
             - BASH_ENV: ~/project/extraenv
+          shell: /bin/bash -e
