@@ -19,3 +19,4 @@ jobs:
        - run:
           name: Run the pws function
           command: pws
+            - BASH_ENV: ~/project/extraenv
