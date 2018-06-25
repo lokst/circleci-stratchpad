@@ -15,4 +15,4 @@ jobs:
           name: Print the environment
           command: env
           environment:
-            - BASH_ENV: "~/project/extraenv"
+            - BASH_ENV: ~/project/extraenv
