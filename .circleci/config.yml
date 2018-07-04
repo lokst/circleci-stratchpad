@@ -13,5 +13,4 @@ jobs:
           command: |
             brew update
             brew upgrade python
-            EDITOR="sed -i '' 's/system \".\/configure\",/system \".\/configure\", \"--disable-shared\",/g'" brew edit protobuf
             brew install protobuf
