@@ -3,6 +3,7 @@ jobs:
    build:
      docker:
        - image: circleci/python
+       - image: circleci/postgres
          name: foobar
      steps:
        - checkout
