@@ -3,7 +3,7 @@ jobs:
    build:
      docker:
        - image: circleci/python
-           name: foobar
+         name: foobar
      steps:
        - checkout
        - run:
