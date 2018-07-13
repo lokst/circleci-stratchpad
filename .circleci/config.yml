@@ -8,3 +8,6 @@ jobs:
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
+       - run:
+          name: Print the host name
+          command: hostname
