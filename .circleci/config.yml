@@ -18,5 +18,7 @@ workflows:
            filters:
              branches:
                only: /.*/
+               ignore: cron
+               
      jobs:
        - build
