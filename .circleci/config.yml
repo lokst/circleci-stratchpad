@@ -5,7 +5,7 @@ jobs:
        - image: circleci/python
        - image: circleci/postgres
          name: foobar
-         entrypoint: /bin/sh -c "'hostname"
+         entrypoint: /bin/sh -c "hostname"
      steps:
        - checkout
        - run:
