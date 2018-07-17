@@ -511,7 +511,6 @@ workflows:
   all:
     jobs:
     - completed:
-        context: org-global
         requires:
         - job1
         - job2
