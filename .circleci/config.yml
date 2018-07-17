@@ -1,10 +1,839 @@
 version: 2
 jobs:
-   build:
+   started:
      docker:
        - image: circleci/python
      steps:
-       - checkout
        - run:
-          name: Say hello to the world
-          command: echo "Hello, World!"
+           name: Start
+           command: echo "Start"
+   completed:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           name: Complete the build
+           command: echo "Everything's complete now"
+       - run:
+           name: Print the environment
+           command: env 
+
+   job1:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job2:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job3:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job4:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job5:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job6:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job7:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job8:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job9:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job10:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job11:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job12:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job13:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job14:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job15:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job16:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job17:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job18:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job19:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job20:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job21:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job22:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job23:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job24:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job25:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job26:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job27:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job28:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job29:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job30:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job31:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job32:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job33:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job34:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job35:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job36:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job37:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job38:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job39:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job40:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job41:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job42:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job43:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job44:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job45:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job46:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job47:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job48:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job49:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job50:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job51:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job52:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job53:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job54:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job55:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job56:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job57:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job58:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job59:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job60:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job61:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job62:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job63:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job64:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job65:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job66:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job67:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job68:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job69:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job70:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job71:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job72:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job73:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job74:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job75:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job76:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job77:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job78:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job79:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job80:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+   job81:
+     docker:
+       - image: circleci/python
+     steps:
+       - run:
+           command: echo "Hello, World!"
+
+
+workflows:
+  version: 2
+  all:
+    jobs:
+    - completed:
+        context: org-global
+        requires:
+        - job1
+        - job2
+        - job3
+        - job4
+        - job5
+        - job6
+        - job7
+        - job8
+        - job9
+        - job10
+        - job11
+        - job12
+        - job13
+        - job14
+        - job15
+        - job16
+        - job17
+        - job18
+        - job19
+        - job20
+        - job21
+        - job22
+        - job23
+        - job24
+        - job25
+        - job26
+        - job27
+        - job28
+        - job29
+        - job30
+        - job31
+        - job32
+        - job33
+        - job34
+        - job35
+        - job36
+        - job37
+        - job38
+        - job39
+        - job40
+        - job41
+        - job42
+        - job43
+        - job44
+        - job45
+        - job46
+        - job47
+        - job48
+        - job49
+        - job50
+        - job51
+        - job52
+        - job53
+        - job54
+        - job55
+        - job56
+        - job57
+        - job58
+        - job59
+        - job60
+        - job61
+        - job62
+        - job63
+        - job64
+        - job65
+        - job66
+        - job67
+        - job68
+        - job69
+        - job70
+        - job71
+        - job72
+        - job73
+        - job74
+        - job75
+        - job76
+        - job77
+        - job78
+        - job79
+        - job80
+        - job81
+    - job1:
+        requires:
+        - started
+    - job2:
+        requires:
+        - started
+    - job3:
+        requires:
+        - started
+    - job4:
+        requires:
+        - started
+    - job5:
+        requires:
+        - started
+    - job6:
+        requires:
+        - started
+    - job7:
+        requires:
+        - started
+    - job8:
+        requires:
+        - started
+    - job9:
+        requires:
+        - started
+    - job10:
+        requires:
+        - started
+    - job11:
+        requires:
+        - started
+    - job12:
+        requires:
+        - started
+    - job13:
+        requires:
+        - started
+    - job14:
+        requires:
+        - started
+    - job15:
+        requires:
+        - started
+    - job16:
+        requires:
+        - started
+    - job17:
+        requires:
+        - started
+    - job18:
+        requires:
+        - started
+    - job19:
+        requires:
+        - started
+    - job20:
+        requires:
+        - started
+    - job21:
+        requires:
+        - started
+    - job22:
+        requires:
+        - started
+    - job23:
+        requires:
+        - started
+    - job24:
+        requires:
+        - started
+    - job25:
+        requires:
+        - started
+    - job26:
+        requires:
+        - started
+    - job27:
+        requires:
+        - started
+    - job28:
+        requires:
+        - started
+    - job29:
+        requires:
+        - started
+    - job30:
+        requires:
+        - started
+    - job31:
+        requires:
+        - started
+    - job32:
+        requires:
+        - started
+    - job33:
+        requires:
+        - started
+    - job34:
+        requires:
+        - started
+    - job35:
+        requires:
+        - started
+    - job36:
+        requires:
+        - started
+    - job37:
+        requires:
+        - started
+    - job38:
+        requires:
+        - started
+    - job39:
+        requires:
+        - started
+    - job40:
+        requires:
+        - started
+    - job41:
+        requires:
+        - started
+    - job42:
+        requires:
+        - started
+    - job43:
+        requires:
+        - started
+    - job44:
+        requires:
+        - started
+    - job45:
+        requires:
+        - started
+    - job46:
+        requires:
+        - started
+    - job47:
+        requires:
+        - started
+    - job48:
+        requires:
+        - started
+    - job49:
+        requires:
+        - started
+    - job50:
+        requires:
+        - started
+    - job51:
+        requires:
+        - started
+    - job52:
+        requires:
+        - started
+    - job53:
+        requires:
+        - started
+    - job54:
+        requires:
+        - started
+    - job55:
+        requires:
+        - started
+    - job56:
+        requires:
+        - started
+    - job57:
+        requires:
+        - started
+    - job58:
+        requires:
+        - started
+    - job59:
+        requires:
+        - started
+    - job60:
+        requires:
+        - started
+    - job61:
+        requires:
+        - started
+    - job62:
+        requires:
+        - started
+    - job63:
+        requires:
+        - started
+    - job64:
+        requires:
+        - started
+    - job65:
+        requires:
+        - started
+    - job66:
+        requires:
+        - started
+    - job67:
+        requires:
+        - started
+    - job68:
+        requires:
+        - started
+    - job69:
+        requires:
+        - started
+    - job70:
+        requires:
+        - started
+    - job71:
+        requires:
+        - started
+    - job72:
+        requires:
+        - started
+    - job73:
+        requires:
+        - started
+    - job74:
+        requires:
+        - started
+    - job75:
+        requires:
+        - started
+    - job76:
+        requires:
+        - started
+    - job77:
+        requires:
+        - started
+    - job78:
+        requires:
+        - started
+    - job79:
+        requires:
+        - started
+    - job80:
+        requires:
+        - started
+    - job81:
+        requires:
+        - started
