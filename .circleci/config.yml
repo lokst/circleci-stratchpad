@@ -510,6 +510,6 @@ workflows:
   version: 2
   all:
     jobs:
-    - completed:
-        requires:
-          - started
+      - completed:
+          requires:
+            - started
