@@ -14,11 +14,9 @@ jobs:
        - run:
            name: Complete the build
            command: echo "Everything's complete now"
-           shell: /usr/bin/env -u CIRCLE_WORKFLOW_CONCURRENCY_MAP /bin/bash -eo pipefail
        - run:
            name: Print the environment
            command: env 
-           shell: /usr/bin/env -u CIRCLE_WORKFLOW_CONCURRENCY_MAP /bin/bash -eo pipefail
 
    job1:
      docker:
