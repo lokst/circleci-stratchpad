@@ -12,7 +12,7 @@ jobs:
             tar -xvf ~/elasticsearch-2.4.3.tar.gz --directory ~/
             sudo sed -i 's/# network.host: 192.168.0.1/network.host: 0.0.0.0/g' ~/elasticsearch-2.4.3/config/elasticsearch.yml
             sudo sed -i 's/# http.port: 9200/http.port: 9200/g' ~/elasticsearch-2.4.3/config/elasticsearch.yml
-            ES_JAVA_OPTS="-Xms256m -Xmx256m" ~/elasticsearch-2.4.3/bin/elasticsearch -d
+            ES_JAVA_OPTS="-Xms256m -Xmx256m" ~/elasticsearch-2.4.3/bin/elasticsearch
           background: true
        - run:
           name: Say hello to the world
