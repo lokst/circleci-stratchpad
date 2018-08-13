@@ -10,7 +10,7 @@ jobs:
        - checkout
        - run:
           name: Print the environment
-          command: env
+          command: /usr/bin/env
           when: always
        - run:
           name: Say hello to the world
