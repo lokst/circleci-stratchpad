@@ -11,7 +11,7 @@ jobs:
        - persist_to_workspace:
           root: .
           paths:
-            - *
+            - ./*
    display:
      docker:
        - image: circleci/python
@@ -26,6 +26,6 @@ workflows:
   generate-and-display:
     jobs:
       - generate
-      - display
+      - display:
           requires:
             - generate
