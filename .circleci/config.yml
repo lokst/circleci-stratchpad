@@ -1,9 +1,6 @@
 version: 2
 jobs:
    build:
-     environment:
-       ANDROID_HOME: /usr/local/Caskroom/android-sdk
-       PATH: $PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
      macos:
        xcode: "8.3.3"
      steps:
