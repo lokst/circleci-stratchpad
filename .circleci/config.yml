@@ -15,6 +15,7 @@ jobs:
    display:
      docker:
        - image: circleci/python
+     steps:
        - attach_workspace:
            at: .
        - run:
