@@ -1,10 +1,31 @@
 version: 2
 jobs:
-   build:
+   generate:
      docker:
        - image: circleci/python
      steps:
        - checkout
        - run:
-          name: Say hello to the world
-          command: echo "Hello, World!"
+          name: Save the message
+          command: echo "Hello, World!" > message.txt
+       - persist_to_workspace:
+          root: .
+          paths:
+            - *
+   display:
+     docker:
+       - image: circleci/python
+       - attach_workspace:
+           at: .
+       - run:
+           name: Display the message
+           command: cat message.txt
+
+workflows:
+  version: 2
+  generate-and-display:
+    jobs:
+      - generate
+      - display
+          requires:
+            - generate
