@@ -1,24 +1,20 @@
 version: 2
 jobs:
    build:
-     machine:
-       enabled: true
+     docker:
+       image: circleci/python
      steps:
-       - checkout
-       - run:
-          name: Say hello to the world
-          command: echo "Hello, World!"
-       - run:
-          name: Print the environment without setting BASH_ENV
-          command: env
        - run:
           name: Print the environment
-          command: env
-          environment:
-            - BASH_ENV: ~/project/extraenv
+          command: env | sort
        - run:
-          name: Run the pws function
-          command: pws
-          environment:
-            - BASH_ENV: ~/project/extraenv
-          shell: /bin/bash -e
+          name: Export some variables
+          command: |
+            cat > <<EOF
+            export TITI=`date +"%Y-%m-%d_%H-%M-%S"`
+            export TITO=`date +"%Y-%m-%d_%H-%M-%S"`
+            export TETE=$(date +"%Y-%m-%d_%H-%M-%S")
+            EOF
+       - run:
+          name: Print the environment again
+          command: env | sort
