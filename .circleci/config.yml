@@ -10,7 +10,7 @@ jobs:
        - run:
           name: Export some variables
           command: |
-            cat > <<EOF
+            cat >$BASH_ENV <<EOF
             export TITI=`date +"%Y-%m-%d_%H-%M-%S"`
             export TITO=`date +"%Y-%m-%d_%H-%M-%S"`
             export TETE=$(date +"%Y-%m-%d_%H-%M-%S")
