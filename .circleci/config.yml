@@ -1,18 +1,10 @@
 version: 2
 jobs:
    build:
-     machine: true
+     machine:
+       image: circleci/classic:201808-01
      steps:
        - checkout
        - run:
           name: Say hello to the world
           command: echo "Hello, World!"
-       - run:
-          name: Show the current nfiles limit after raising
-          shell: sudo /bin/bash -eol pipefail
-          command: |
-              ulimit -n 65535
-              sudo -u circleci ./runscript
-       - run:
-          name: Show the current nfiles limit again
-          command: ulimit -n
