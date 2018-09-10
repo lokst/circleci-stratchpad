@@ -22,4 +22,4 @@ jobs:
           command: echo "Hello, World!"
        - run:
           name: Show stats on the timestamp file
-          command: stat timestamp
+          command: stat timestamp; echo; ls -alh timestamp
